@@ -17,6 +17,7 @@ const theme = createTheme();
 export default function Register() {
     const [city, setCity] = useState([{ name: '1', id: '1' }])
     const [open, setOpen] = useState(false)
+    const [org, setOrg] = useState([{ name: '1', id: '1' }])
 
     const dispatch = useContext(DispatchContext)
     const navigate = useNavigate()
@@ -42,8 +43,14 @@ export default function Register() {
             console.log(error)
         })
     }
+    const get_org = () => {
+        API.getOrg().then((res) => {
+            setOrg(res.data.results)
+        })
+    }
     useEffect(() => {
         get_city()
+        get_org()
     }, [])
     return (
         <ThemeProvider theme={theme}>
@@ -96,6 +103,24 @@ export default function Register() {
                                 <option key={index} value={item.id}>{item.name}</option>
                             ))}
                         </TextField>
+                        <Grid item xs={12}>
+                            <TextField
+                                id="filled-select-currency-native"
+                                select
+                                label={<FormattedMessage id="foundation_profile" />}
+                                SelectProps={{
+                                    native: true,
+                                }}
+                                {...register('institution')}
+                                fullWidth
+                                variant="outlined"
+                                margin="normal"
+                            >
+                                {org.map((item, index) => (
+                                    <option key={index} value={item.id}>{item.name}</option>
+                                ))}
+                            </TextField>
+                        </Grid>
                         <Input
                             variant="outlined"
                             label={<FormattedMessage id="registration_phone" />}
