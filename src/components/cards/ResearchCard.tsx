@@ -16,6 +16,7 @@ import { CardProps, TimeButtonProps } from "../../interface";
 import Api from '../../utils/api'
 import { useState } from "react";
 import { styled } from '@mui/system';
+import { useNavigate } from 'react-router-dom'
 // import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 // import Consent from "../modals/consent";
 
@@ -43,12 +44,13 @@ export const ResearchCard = ({ schedule }: CardProps) => {
     const [showModal, setShowModal] = useState<boolean>(false)
     const [showConsent, setShowConsent] = useState<boolean>(false)
     const [pickedTime, setPickedTime] = useState<number>(0)
+    const navigate = useNavigate()
 
     const createAppointment = async () => {
         try {
             await Api.sendAppointment({
                 id: schedule.appointments[pickedTime].id
-            })
+            }, navigate)
             setDialogMsg('Успешно! Вы записаны на прием!')
             setOpenDialog(true)
         } catch (e) {

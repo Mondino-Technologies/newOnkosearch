@@ -94,9 +94,10 @@ class API {
         let result = await api(`api/schedules/schedule?date=${date}`).get(null)
         return result
     }
-    sendAppointment(data) {
-        api('api/v1/user/registration/').post(null, data).then(res => {
+    sendAppointment(data, navigate) {
+        api('api/schedules/schedule/').post(null, data).then(res => {
             // dispatch({ type: 'authModal', payload: { register: false, login: true, forgot: false } })
+            navigate('/results')
             console.log(res)
         }).catch((error) => console.log(error))
     }

@@ -2,15 +2,12 @@ import React, { useEffect, useState } from 'react';
 import axios from "axios";
 import * as Moment from 'moment';
 import { extendMoment } from 'moment-range';
-// import {makeStyles, Theme} from '@material-ui/core/styles';
 import { styled } from '@mui/system'
-import { AppBar, Box, LinearProgress, Tab, Tabs, Typography, CircularProgress, Grid } from "@mui/material";
+import { AppBar, Box, LinearProgress, Tab, Tabs, Typography, Grid } from "@mui/material";
 
-// import {ResearchCard} from "../cards/ResearchCard";
 import { TabPanelProps } from "../../../interface";
 import { MyContainer, MenuProfile, ResearchCard } from '../../../components';
 import Api from '../../../utils/api'
-// import {positions} from "@material-ui/system";
 
 const moment = extendMoment(Moment);
 const currentDay = moment(new Date())
