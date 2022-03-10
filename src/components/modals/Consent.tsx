@@ -5,16 +5,13 @@ import { styled } from "@mui/system";
 import { ConsentProps } from '../../interface'
 
 const Paper = styled(Box)(({ theme }) => ({
-    width: 600,
     padding: theme.spacing(2, 4, 3),
     '&:focus': {
         outline: 'none',
     },
-
     borderRadius: 20,
     paddingTop: 20,
     display: 'flex',
-    overflowY: 'scroll',
     height: '50%',
 }))
 

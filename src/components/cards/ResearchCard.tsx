@@ -13,12 +13,11 @@ import {
 } from "@mui/material";
 
 import { CardProps, TimeButtonProps } from "../../interface";
+import { Consent } from '..'
 import Api from '../../utils/api'
 import { useState } from "react";
 import { styled } from '@mui/system';
 import { useNavigate } from 'react-router-dom'
-// import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
-// import Consent from "../modals/consent";
 
 const ModalWindow = styled(Card)(({ theme }) => ({
     backgroundColor: 'white',
@@ -99,7 +98,7 @@ export const ResearchCard = ({ schedule }: CardProps) => {
 
     return (
         <>
-            {/* <Consent isOpen={showConsent} handleClose={handleCloseConsent} /> */}
+            <Consent open={showConsent} setOpen={setShowConsent} />
             <Card style={{
                 width: '95%',
                 margin: 10,
