@@ -8,13 +8,6 @@ import Api from '../../../utils/api'
 import { MenuProfile, MyContainer } from '../../../components'
 import { ResultsProps } from '../../../interface'
 
-// const useStyles = makeStyles({
-//     table: {
-//         minWidth: 300,
-//     },
-// });
-
-
 const BoxWrapper = styled(Box)(({ theme }) => ({
     display: 'flex',
     [theme.breakpoints.down('sm')]: {
@@ -32,14 +25,14 @@ const Results = () => {
 
     const fetchDocuments = async () => {
         Api.getResults().then((res) => {
+            console.log('res', res)
             const newData = res.data.reports.map((result: any) => {
                 return {
                     'id': result.id,
-                    'name': result.name,
+                    'name': result.text,
                 }
             })
             setData(newData)
-            console.log(newData)
             setLoading(false)
         })
     }
@@ -49,7 +42,7 @@ const Results = () => {
     }, [])
 
     const handleOpenReport = (id: any) => {
-        document.location.href='https://онкопоисксаха.рф/api/report/report/' + id
+        document.location.href = 'https://онкопоисксаха.рф/api/report/report/' + id
     }
 
     return (
@@ -59,21 +52,26 @@ const Results = () => {
                 <TableContainer component={Paper} sx={{ mt: 13, ml: 1 }}>
                     <Table sx={{ minWidth: 300 }} size="small" aria-label="a dense table">
                         <TableHead>
-                            <TableRow>
-                                <TableCell>Название</TableCell>
-                            </TableRow>
+                            <TableCell>Название</TableCell>
+                            <TableCell></TableCell>
                         </TableHead>
-                        <TableBody >
+                        <TableBody>
                             {data.length ? data.map((row) => (
-                                <TableRow key={row.id}>
-                                    <TableCell component="th" scope="row">
+                                <TableRow key={row.id} >
+                                    <TableCell>
                                         {row.name}
                                     </TableCell>
-                                    <TableCell>{row.research_type}</TableCell>
-                                    <TableCell style={{ display: "flex", justifyContent: 'flex-end' }}><Button variant="contained"
-                                        style={{ color: "white" }}
-                                        onClick={() => handleOpenReport(row.id)}
-                                        color="primary">открыть</Button></TableCell>
+                                    {/* <TableCell>{row.research_type}</TableCell> */}
+                                    <TableCell >
+                                        <Button
+                                            variant="contained"
+                                            style={{ color: "white", float: 'right' }}
+                                            onClick={() => handleOpenReport(row.id)}
+                                            color="primary"
+                                        >
+                                            открыть
+                                        </Button>
+                                    </TableCell>
                                 </TableRow>
                             )) :
                                 <Typography style={{ padding: "20px" }} align={"left"}>У вас еще нет результатов</Typography>
