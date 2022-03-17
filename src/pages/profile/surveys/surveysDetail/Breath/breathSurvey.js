@@ -219,7 +219,7 @@ export default function BreathSurvey({ arr, id }) {
                             console.log(e.target.value)
                         }} style={{ display: 'flex', flexDirection: 'row' }}>
                             <FormControlLabel checked={weigh == 10} value={10} control={<Radio />} label={<FormattedMessage id="answer4_yes_lung_survey" />} />
-                            <FormControlLabel checked={weigh == 1} value={1} control={<Radio />} label={<FormattedMessage id="answer4_no_lung_survey" />} />
+                            <FormControlLabel checked={weigh == 0} value={0} control={<Radio />} label={<FormattedMessage id="answer4_no_lung_survey" />} />
                         </RadioGroup>
                     </FormControl>
                 </Grid>
@@ -230,7 +230,7 @@ export default function BreathSurvey({ arr, id }) {
                             setAccess(e.target.value)
                         }} style={{ display: 'flex', flexDirection: 'row' }}>
                             <FormControlLabel checked={access == 10} value={10} control={<Radio />} label={<FormattedMessage id="answer5_yes_lung_survey" />} />
-                            <FormControlLabel checked={access == 1} value={1} control={<Radio />} label={<FormattedMessage id="answer5_no_lung_survey" />} />
+                            <FormControlLabel checked={access == 0} value={0} control={<Radio />} label={<FormattedMessage id="answer5_no_lung_survey" />} />
                         </RadioGroup>
                     </FormControl>
                 </Grid>
