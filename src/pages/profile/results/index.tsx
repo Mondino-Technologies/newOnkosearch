@@ -59,7 +59,12 @@ const Results = () => {
                             {data.length ? data.map((row) => (
                                 <TableRow key={row.id} >
                                     <TableCell>
-                                        {row.name}
+                                        <div
+                                            style={{ fontSize: 17 }}
+                                            dangerouslySetInnerHTML={{
+                                                __html: row.name,
+                                            }}
+                                        ></div>
                                     </TableCell>
                                     {/* <TableCell>{row.research_type}</TableCell> */}
                                     <TableCell >
