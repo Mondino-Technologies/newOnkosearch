@@ -26,7 +26,7 @@ const ModalSurveyStatus = () => {
         </Typography>
         <DialogContent dividers>
           <Typography style={{ marginBottom: 15 }}>
-            Благодарим вас за успешное прошождение тестирование!
+          Благодарим вас за успешное прохождение тестирования!
           </Typography>
           <Typography gutterBottom>{state.modalSurveys.description}</Typography>
         </DialogContent>
