@@ -1,22 +1,23 @@
-import React from 'react';
+import React from "react";
 
 export const defaultStore = {
     noti: {
-        status: '',
-        text: '',
-        active: false
+        status: "",
+        text: "",
+        active: false,
     },
     date: {
-        root: ''
+        root: "",
+    },
+    registerModal: {
+        open: false,
     },
     modalSurveys: {
-        description: '',
+        description: "",
         open: false,
-        username: ''
+        username: "",
     },
 };
-
-
 
 export const StateContext = React.createContext();
 export const DispatchContext = React.createContext();
