@@ -38,13 +38,6 @@ const Liver = () => {
                 <FormattedMessage id="weight_loss_liver_cancer" />,
             ],
         },
-        {
-            title: '',
-            type: 'text',
-            elem: [
-                <FormattedMessage id="specific_symptom_liver_canser" />
-            ],
-        },
     ]
 
     const data2 = [
@@ -52,7 +45,7 @@ const Liver = () => {
             align: 'start',
             text: [
                 <FormattedMessage id="early_diagnosis_liver_cancer" />,
-                'На сегодняшний день стандартной процедурой скрининга у групп высокого риска является: 1)ультразвуковое исследование (УЗИ) печени, 2)	определение онкомаркера (АФП). '
+                <FormattedMessage id='standart_procedure_liver_cancer'/>
             ],
         },
     ]

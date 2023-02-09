@@ -1,6 +1,5 @@
-import React from 'react'
-
-import { Outlet } from 'react-router-dom'
+import React, {useEffect} from 'react'
+import {Outlet, useLocation} from 'react-router-dom'
 import { styled } from '@mui/system'
 import { Box } from '@mui/material'
 
@@ -14,6 +13,11 @@ const Main = styled(Box)(({ theme }) => ({
 }))
 
 const Layout: React.FC = () => {
+    const location = useLocation()
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [location.pathname])
+
     return (
         <div>
             <Header />

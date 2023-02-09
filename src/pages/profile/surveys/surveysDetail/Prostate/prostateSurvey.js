@@ -168,7 +168,6 @@ export default function ProstateLandingForm({ arr, id }) {
                     <FormControl component="fieldset">
                         <FormLabel component="legend">1. {arr[0]}</FormLabel>
                         <RadioGroup aria-label="gender" name="gender1" value={toiletTimes} onChange={(e) => {
-                            console.log(e.target.value)
                             setToiletTimes(e.target.value)
                         }} style={{ display: 'flex', flexDirection: 'row' }}>
                             <FormControlLabel checked={toiletTimes == 0} value={0} control={<Radio />} label={<FormattedMessage id="answer1_no_prostate_survey" />} />
@@ -182,7 +181,6 @@ export default function ProstateLandingForm({ arr, id }) {
                         <FormLabel component="legend">2. {arr[1]}</FormLabel>
                         <RadioGroup value={notFull} onChange={(e) => {
                             setNotFull(e.target.value)
-                            console.log(e.target.value)
                         }} style={{ display: 'flex', flexDirection: 'row' }}>
                             <FormControlLabel checked={notFull == 1} value={1} control={<Radio />} label={<FormattedMessage id="answer2_yes_prostate_survey" />} />
                             <FormControlLabel checked={notFull == 0} value={0} control={<Radio />} label={<FormattedMessage id="answer2_no_prostate_survey" />} />

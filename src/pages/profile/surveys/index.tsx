@@ -58,7 +58,6 @@ const Surveys = () => {
     const [open, setOpen] = useState(false)
     useEffect(() => {
         Api.getSurveysTypes().then((res) => {
-            console.log(res)
             const result = res.data.results.map((result: any) => {
                 return {
                     'research': result.research,

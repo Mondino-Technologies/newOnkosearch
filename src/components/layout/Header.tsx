@@ -60,7 +60,7 @@ const Cuslink = styled(Link)(({ theme }) => ({
 
 const CustomMenuItem = styled(MenuItem)(({ theme }) => ({
     fontSize: 20,
-    minWidth: 160,
+    minWidth: 125,
     display: "flex",
     alignItems: "center",
     justifyContent: "center",

@@ -30,7 +30,6 @@ const Gut = () => {
                 <FormattedMessage id="breast_data1_text6_column1" />,
                 <FormattedMessage id="breast_data1_text7_column1" />,
                 <FormattedMessage id="breast_data1_text8_column1" />,
-                <FormattedMessage id="breast_data1_text9_column1" />,
             ],
         },
         {

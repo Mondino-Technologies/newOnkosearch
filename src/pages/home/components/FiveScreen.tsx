@@ -24,7 +24,7 @@ const Circle = styled(Box)(({theme}) => ({
 const CardItem = styled(Box)(({theme}) => ({
     width: '90%',
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'center',
     flexDirection: 'column',
     height: 250,

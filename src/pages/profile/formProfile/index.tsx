@@ -133,7 +133,7 @@ const FormProfile = () => {
                                         }}
                                         value={date}
                                         onChange={(e) => {
-                                            setDate(e.target.value)
+                                            setDate(e.target.value);
                                         }}
                                     />
                                 </Grid>
@@ -141,9 +141,14 @@ const FormProfile = () => {
                                     <TextField id={"phone"} label={<FormattedMessage id="snils_profile" />} variant={"outlined"} name={"phone"}
                                         required
                                         fullWidth
+                                        inputProps={{ maxLength: 11 }}
                                         value={snils}
+
                                         onChange={(e) => {
-                                            setSnils(e.target.value)
+                                            const regex = /^[0-9\b]+$/;
+                                            if (e.target.value === "" || regex.test(e.target.value)) {
+                                                setSnils(e.target.value)
+                                            }
                                         }}
                                     />
                                 </Grid>
@@ -151,9 +156,13 @@ const FormProfile = () => {
                                     <TextField id={"phone"} label={<FormattedMessage id="polis_profile" />} variant={"outlined"} name={"phone"}
                                         required
                                         fullWidth
+                                        inputProps={{ maxLength: 16 }}
                                         value={oms}
                                         onChange={(e) => {
-                                            setOms(e.target.value)
+                                            const regex = /^[0-9\b]+$/;
+                                            if (e.target.value === "" || regex.test(e.target.value)) {
+                                                setOms(e.target.value);
+                                            }
                                         }}
                                     />
                                 </Grid>

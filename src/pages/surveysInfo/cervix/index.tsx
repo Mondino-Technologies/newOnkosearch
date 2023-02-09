@@ -37,10 +37,7 @@ const Cervix = () => {
             type: 'text',
             elem: [
                 <FormattedMessage id="cervix_data1_text3" />,
-                <FormattedMessage id="cervix_data1_text4" />,
                 <FormattedMessage id="cervix_data1_text5" />,
-                <FormattedMessage id="cervix_data1_text6" />,
-                <FormattedMessage id="cervix_data1_text7" />,
             ],
         },
     ]
@@ -72,7 +69,7 @@ const Cervix = () => {
                 title={<FormattedMessage id="cervix_cancer" />}
                 description={<FormattedMessage id="cervix_cancer_description" />}
                 img="Group66"
-                infoImg="Frame6"
+                infoImg="Frame8"
             />
             <TextInfoScreen data={data1} />
             <ThreeScreen data={data2} showInfoText={true} />

@@ -71,7 +71,6 @@ const Schedule = () => {
     const fetchSchedules = async (date: string) => {
         setLoading(true)
         await Api.schedule(date).then((res) => {
-            console.log(res)
             const result = res.data.schedule.map((schedule: any) => {
                 return schedule
             })

@@ -25,7 +25,6 @@ const Results = () => {
 
     const fetchDocuments = async () => {
         Api.getResults().then((res) => {
-            console.log('res', res)
             const newData = res.data.reports.map((result: any) => {
                 return {
                     'id': result.id,

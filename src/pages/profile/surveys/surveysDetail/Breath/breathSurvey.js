@@ -78,7 +78,6 @@ export default function BreathSurvey({ arr, id }) {
     }
 
     useEffect(() => {
-        console.log(smoke)
         calculateSmoke()
     }, [smokeAge, smokeBundles])
 
@@ -165,13 +164,11 @@ export default function BreathSurvey({ arr, id }) {
                                 variant={"outlined"} value={smokeBundles}
                                 onChange={(e) => {
                                     setSmokeBundles(e.target.value)
-                                    console.log(e.target.value, 'count')
                                 }} style={{ marginLeft: 10, }} />
                             <TextField id={"outlined-basic"} margin="normal" type="number" label={<FormattedMessage id="answer1_how_years_lung_survey" />}
                                 variant={"outlined"} value={smokeAge}
                                 onChange={(e) => {
                                     setSmokeAge(e.target.value)
-                                    console.log(e.target.value, 'ages')
                                 }} style={{ marginLeft: 10, }} />
                             <TextField id={"outlined-basic"} margin="normal" type="number" variant={"outlined"} aria-readonly={true}
                                 value={smokeResult}
@@ -191,7 +188,6 @@ export default function BreathSurvey({ arr, id }) {
                         <FormLabel component="legend">2. {arr[1]}</FormLabel>
                         <RadioGroup value={tomography} onChange={(e) => {
                             setTomography(e.target.value)
-                            console.log(e.target.value)
                         }} style={{ display: 'flex', flexDirection: 'row' }}>
                             <FormControlLabel checked={tomography == 1} value={1} control={<Radio />} label={<FormattedMessage id="answer2_yes_lung_survey" />} />
                             <FormControlLabel checked={tomography == 0} value={0} control={<Radio />} label={<FormattedMessage id="answer2_no_lung_survey" />} />
@@ -203,7 +199,6 @@ export default function BreathSurvey({ arr, id }) {
                         <FormLabel component="legend">3. {arr[2]}</FormLabel>
                         <RadioGroup aria-label="gender" name="gender1" value={blood} onChange={(e) => {
                             setBlood(e.target.value)
-                            console.log(e.target.value)
                         }} style={{ display: 'flex', flexDirection: 'row' }}>
                             <FormControlLabel checked={blood == 1} value={1} control={<Radio />} label={<FormattedMessage id="answer3_yes_lung_survey" />} />
                             <FormControlLabel checked={blood == 0} value={0} control={<Radio />} label={<FormattedMessage id="answer3_no_lung_survey" />} />
@@ -216,7 +211,6 @@ export default function BreathSurvey({ arr, id }) {
                         </FormLabel>
                         <RadioGroup aria-label="gender" name="gender1" value={weigh} onChange={(e) => {
                             setWeigh(e.target.value)
-                            console.log(e.target.value)
                         }} style={{ display: 'flex', flexDirection: 'row' }}>
                             <FormControlLabel checked={weigh == 10} value={10} control={<Radio />} label={<FormattedMessage id="answer4_yes_lung_survey" />} />
                             <FormControlLabel checked={weigh == 0} value={0} control={<Radio />} label={<FormattedMessage id="answer4_no_lung_survey" />} />
@@ -239,7 +233,6 @@ export default function BreathSurvey({ arr, id }) {
                         <FormLabel component="legend">6. {arr[5]}</FormLabel>
                         <RadioGroup aria-label="gender" name="gender1" value={temperature} onChange={(e) => {
                             setTemperature(e.target.value)
-                            console.log(e.target.value)
                         }} style={{ display: 'flex', flexDirection: 'row' }}>
                             <FormControlLabel checked={temperature == 1} value={1} control={<Radio />} label={<FormattedMessage id="answer6_yes_lung_survey" />} />
                             <FormControlLabel checked={temperature == 0} value={0} control={<Radio />} label={<FormattedMessage id="answer6_no_lung_survey" />} />

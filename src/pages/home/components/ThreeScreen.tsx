@@ -25,9 +25,13 @@ const CompanyItem = styled(Box)(({ theme }) => ({
 const Box1 = styled(Box)(({ theme }) => ({
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
+    width: '100%',
     marginTop: 30,
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    [theme.breakpoints.down('lg')]: {
+        justifyContent: 'center',
+    },
 }))
 
 const ThreeScreen: React.FC = () => {
@@ -46,7 +50,7 @@ const ThreeScreen: React.FC = () => {
                 <Box1>
                     {CompanyList.map((itemCompany) => (
                         <CompanyItem key={itemCompany}>
-                            <img src={`/img/Element/${itemCompany}.png`} />
+                            <img src={`/img/Element/${itemCompany}.svg`} />
                         </CompanyItem>
                     ))}
                 </Box1>

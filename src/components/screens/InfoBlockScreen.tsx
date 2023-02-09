@@ -23,7 +23,7 @@ const GridImg = styled(Grid)(({ theme }) => ({
 }))
 
 const ImgCustom = styled('img')(({ theme }) => ({
-    width: 250,
+    width: 300,
     position: 'absolute',
     marginTop: 150,
     zIndex: 1,
@@ -88,7 +88,7 @@ const InfoBlockScreen: React.FC<InfoBlockScreenProps> = ({ title, description, i
                     </MyText>
                 </Grid>
                 <Grid item lg={3} xl={3} md={3} sm={6} xs={12} style={{ display: 'flex', justifyContent: 'center' }}>
-                    <ImgCustom src={`/img/Element/${infoImg}.png`} />
+                    <ImgCustom src={`/img/Element/${infoImg}.svg`} />
                 </Grid>
                 <GridImg item lg={3} xl={3} md={3} sm={6} xs={12}>
                     <MainImg src={`/img/Element/${img}.png`} />

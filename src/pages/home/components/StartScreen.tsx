@@ -70,17 +70,17 @@ const StartScreen: React.FC = () => {
                 </Title>
                 <Grid container sx={{ mt: 5 }}>
                     <GridItemShow item lg={3} xl={3} md={3} sm={3} xs={12}>
-                        <img style={{ width: '120%', marginTop: 30 }} src="/img/Element/Frame1.png" />
+                        <img style={{ width: '120%', marginTop: 30 }} src="/img/Element/Frame1.svg" />
                     </GridItemShow>
                     <GridItemColumn item lg={3} xl={3} md={3} sm={3} xs={12}>
-                        <Img src="/img/Element/Frame2.png" />
-                        <Img sx={{ mt: 1 }} src="/img/Element/Frame3.png" />
+                        <Img src="/img/Element/Frame2.svg" />
+                        <Img sx={{ mt: 1 }} src="/img/Element/Frame3.svg" />
                     </GridItemColumn>
                     <GridItem item lg={3} xl={3} md={3} sm={3} xs={12}>
-                        <Img src="/img/Element/Frame4.png" />
+                        <Img src="/img/Element/Frame4.svg" />
                     </GridItem>
                     <GridItem item lg={3} xl={3} md={3} sm={3} xs={12}>
-                        <Img src="/img/Element/Frame5.png" />
+                        <Img src="/img/Element/Frame5.svg" />
                     </GridItem>
                 </Grid>
             </Box>

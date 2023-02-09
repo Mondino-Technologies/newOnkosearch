@@ -10,7 +10,7 @@ const CardUsefulLinksList = [
     {
         img: 'Group69',
         description: 'Якутский республиканский онкологический диспансер',
-        link: 'https://onkosakha.ru'
+        link: 'https://onco.mzsakha.ru'
     },
     {
         img: 'Group-36',

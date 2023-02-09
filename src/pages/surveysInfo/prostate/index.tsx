@@ -53,7 +53,7 @@ const Prostate = () => {
                 title={<FormattedMessage id="prostate_cancer" />}
                 description={<FormattedMessage id="prostate_description" />}
                 img="prostata"
-                infoImg="Frame27"
+                infoImg="Frame28"
             />
             <TextInfoScreen data={data1} />
             <ThreeScreen data={data2} showInfoText={true} />

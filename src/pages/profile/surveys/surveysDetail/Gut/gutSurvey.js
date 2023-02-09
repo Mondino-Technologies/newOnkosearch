@@ -241,7 +241,6 @@ export default function GutSurvey({ arr, id }) {
                         <FormLabel component="legend">7. <FormattedMessage id="incomplete_emptying_intestine_survey" /></FormLabel>
                         <RadioGroup aria-label="gender" name="gender1" value={chronic} onChange={(e) => {
                             setChronic(e.target.value)
-                            console.log(e.target.value)
                         }} style={{ display: 'flex', flexDirection: 'row' }}>
                             <FormControlLabel checked={chronic == 10} value={10} control={<Radio />} label={<FormattedMessage id="answer7_yes_intestine_survey" />} />
                             <FormControlLabel checked={chronic == 0} value={0} control={<Radio />} label={<FormattedMessage id="answer7_no_intestine_survey" />} />
@@ -261,7 +260,6 @@ export default function GutSurvey({ arr, id }) {
                             }}
                             onChange={(e) => {
                                 setTextField(e.target.value)
-                                console.log(e.target.value)
                             }}
                             value={textField}
                             style={{ marginTop: 20 }}

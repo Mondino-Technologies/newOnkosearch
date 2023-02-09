@@ -80,7 +80,7 @@ const FourScreen: React.FC = () => {
                     </Box>
                 </GridText>
                 <Grid item lg={7} xl={7} md={6} sm={12} xs={12}>
-                    <img style={{ width: '100%' }} src={'/img/Background/info_platform1.png'} />
+                    <img style={{ width: '100%' }} src={'/img/Background/info_platform1.svg'} />
                 </Grid>
             </MainBox>
         </MyContainer>

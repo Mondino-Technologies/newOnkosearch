@@ -46,7 +46,6 @@ class API {
                     },
                 });
                 navigate("/form-profile");
-                console.log(res);
             })
             .catch(() => {
                 dispatch({
@@ -152,7 +151,6 @@ class API {
         api("api/surveys/survey/")
             .post(null, data)
             .then((res) => {
-                console.log("res", res);
                 const danger = res.data.is_danger;
                 const clinic = res.data.to_clinic;
                 if (danger == true) {
@@ -187,7 +185,6 @@ class API {
                         },
                     });
                 }
-                console.log(clinic, danger);
             })
             .catch(() => {
                 dispatch({
@@ -212,7 +209,6 @@ class API {
             .then((res) => {
                 // dispatch({ type: 'authModal', payload: { register: false, login: true, forgot: false } })
                 navigate("/results");
-                console.log(res);
             })
             .catch((error) => console.log(error));
     }
@@ -228,7 +224,6 @@ class API {
                         text: "ваше сообщение отправлено",
                     },
                 });
-                console.log(res);
             })
             .catch((error) => console.log(error));
     }
