@@ -43,6 +43,10 @@ const ThreeScreen = () => {
             span: 'ООО "ОШЕР"'
         },
         {
+            label: 'Электронная почта изготовителя:',
+            span: 'osher.tech@yandex.ru'
+        },
+        {
             label: 'Телефон тех. поддержки:',
             span: '+79242414298'
         },
