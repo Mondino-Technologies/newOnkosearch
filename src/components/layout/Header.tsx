@@ -87,7 +87,7 @@ const Header: React.FC = () => {
         drawerOpen: false,
     });
     const navigate = useNavigate();
-    const cookieVar = cookie.get("jwttoken");
+    const cookieVar = localStorage.getItem("jwttoken");
     const { mobileView, drawerOpen } = state;
 
     const languages = [

@@ -7,7 +7,7 @@ const testURL = "http://127.0.0.1:8000/";
 const publicURL = "https://онкопоисксаха.рф/";
 
 const api = (url) => {
-    const token = cookie.get("jwttoken");
+    const token = localStorage.getItem("jwttoken");
     if (token) {
         const instance = axios.create({
             baseURL: publicURL + url,
@@ -36,7 +36,7 @@ class API {
                 password: password,
             })
             .then((res) => {
-                cookie.set("jwttoken", res.data.access);
+                localStorage.setItem("jwttoken", res.data.access);
                 dispatch({
                     type: "notification",
                     payload: {

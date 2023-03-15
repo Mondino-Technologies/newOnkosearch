@@ -14,16 +14,28 @@ const Main = styled(Box)(({ theme }) => ({
 
 const Layout: React.FC = () => {
     const location = useLocation();
-    const csrftoken = cookie.get("csrftoken");
-    const sessionid = cookie.get("sessionid");
+    // const csrftoken = cookie.get("csrftoken");
+    // const sessionid = cookie.get("sessionid");
+    function CookiesDelete() {
+        var cookies = document.cookie.split(";");
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i];
+            var eqPos = cookie.indexOf("=");
+            var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+            document.cookie =
+                name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;";
+            document.cookie =
+                name +
+                "=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+        }
+    }
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [location.pathname]);
     useEffect(() => {
-        cookie.remove("csrftoken");
-        cookie.remove("sessionid");
-    }, [csrftoken, sessionid]);
+        CookiesDelete();
+    }, []);
 
     return (
         <div>

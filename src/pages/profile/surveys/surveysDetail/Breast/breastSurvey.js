@@ -62,14 +62,10 @@ const BreastSurvey = ({ arr, id }) => {
     const [menstruation, setMenstruation] = useState("");
     const [childBirth, setChildBirth] = useState(null);
     const [temperature, setTemperature] = useState(null);
-    const [show, setShow] = useState(false)
-    const [showFalse, setShowFalse] = useState(false)
-    const [showMiddle, setShowMiddle] = useState(false)
-    const [district, setDistrict] = useState(1)
     const [checked, setChecked] = useState(false)
     const [isActiveButton, setActiveButton] = useState(false)
     const dispatch = useContext(DispatchContext)
-    const date = cookie.get('date')
+    const date = localStorage.getItem('date')
     const checkFormValid = () => {
         checked ? setActiveButton(true) : setActiveButton(false)
     }
