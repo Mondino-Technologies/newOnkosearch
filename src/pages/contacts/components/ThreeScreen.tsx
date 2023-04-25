@@ -1,65 +1,73 @@
-import React from 'react'
+import React from "react";
 
-import { MyContainer, MyText, MyButton } from '../../../components'
-import {Box, Grid} from '@mui/material'
-import { styled } from '@mui/system'
+import { MyContainer, MyText, MyButton } from "../../../components";
+import { Box, Grid } from "@mui/material";
+import { styled } from "@mui/system";
 
 const GridText = styled(Grid)(({ theme }) => ({
     padding: 30,
-    [theme.breakpoints.down('sm')]: {
-        padding: 5
+    [theme.breakpoints.down("sm")]: {
+        padding: 5,
     },
-}))
-const Span = styled('span')({
+}));
+const Span = styled("span")({
     marginLeft: 20,
-    color: '#245852'
-})
+    color: "#245852",
+});
 const BoxText = styled(Box)(({ theme }) => ({
-    width: '70%',
-    [theme.breakpoints.down('sm')]: {
-        width: '100%'
+    width: "70%",
+    [theme.breakpoints.down("sm")]: {
+        width: "100%",
     },
-}))
+}));
 
 const Line = styled(Box)(({ theme }) => ({
     width: 100,
     height: 3,
-    backgroundColor: '#0B806B',
-    marginBottom: 20
-}))
+    backgroundColor: "#0B806B",
+    marginBottom: 20,
+}));
 
 const ThreeScreen = () => {
     const data = [
         {
-            label: 'Версия и дата ПО:',
-            span: 'от 25.02.2022 v1.25.2.22.'
+            label: "Версия и дата ПО:",
+            span: "от 25.02.2022 v1.25.2.22.",
         },
         {
-            label: 'Наименования МИ:',
-            span: '"Онкопоиск"'
+            label: "Наименования МИ:",
+            span: '"Онкопоиск"',
         },
         {
-            label: 'Предприятие изготовитель:',
-            span: 'ГБУ РС (Я) "Якутский республиканский онкологический диспансер"'
+            label: "Предприятие изготовитель:",
+            span: 'ГБУ РС (Я) "Якутский республиканский онкологический диспансер"',
         },
         {
-            label: 'Электронная почта изготовителя:',
-            span: 'yarod@gov14.ru'
+            label: "Электронная почта изготовителя:",
+            span: "yarod@gov14.ru",
         },
         {
-            label: 'Телефон тех. поддержки:',
-            span: '+79242414298'
+            label: "Телефон тех. поддержки:",
+            span: "+7 (968) 154-07-70",
         },
         {
-            label: 'Проект ТУ:',
-            span: 'ТУ 58.29.32-001-01960469-2023'
+            label: "Проект ТУ:",
+            span: "ТУ 58.29.32-001-01960469-2023",
         },
-    ]
+    ];
     return (
         <MyContainer wrapper={false} sx={{ mt: 5 }} minHeight={300}>
             <GridText item lg={7} xl={7} md={7} sm={12} xs={12}>
                 {data.map((item, index) => (
-                    <MyText variant="h6" sm={16} sx={{ fontWeight: 'normal', mt: 1 }} key={index}>{item.label}<Span>{item.span}</Span></MyText>
+                    <MyText
+                        variant="h6"
+                        sm={16}
+                        sx={{ fontWeight: "normal", mt: 1 }}
+                        key={index}
+                    >
+                        {item.label}
+                        <Span>{item.span}</Span>
+                    </MyText>
                 ))}
             </GridText>
         </MyContainer>
@@ -83,7 +91,7 @@ const ThreeScreen = () => {
         //         Узнать результат
         //     </MyButton>
         // </MyContainer>
-    )
-}
+    );
+};
 
-export default ThreeScreen
+export default ThreeScreen;
